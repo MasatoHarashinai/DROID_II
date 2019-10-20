@@ -1,0 +1,6 @@
+﻿  cGameManager.cpp
+C:\Develop\repository\DROID_II\src\cpp\cGameManager.cpp(105,45): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  cMain.cpp
+  コードを生成中...
+C:\Develop\repository\DROID_II\src\cpp\cGameManager.cpp(111,42): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  DROID_II.vcxproj -> C:\Develop\repository\DROID_II\\build\bin\x64\Debug\DROID_II.exe
