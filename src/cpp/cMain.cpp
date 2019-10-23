@@ -7,8 +7,6 @@
 
 //// プロトタイプ宣言 //
 bool setScreen();
-//bool checkHit(int x1, int y1, int w1 , int h1, int x2, int y2, int w2, int h2, int margin);	// 画像同士の衝突を調べる関数(margin : 判定をどのくらい弱くするか)
-//void showDebugScreen(cPlayer p, cCommon c[], cBeam b[], int SpwnTime, int LastSpawn);
 
 // メイン関数
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
@@ -64,78 +62,3 @@ bool setScreen(){
 	return false;
 }
 
-//void showDebugScreen(cPlayer p, cCommon c[], cBeam b[], int SpawnTime, int LastSpawn)
-//{
-//	// ローカル変数
-//	int red = GetColor(255,0,0);
-//	int green = GetColor(0,255,0);
-//	int blue = GetColor(0,0,255);
-//	int sky_blue = GetColor(80,80,255);
-//	char bState = 'F';
-//	char cState_alive = 'F';
-//	char cState_god = 'F';
-//	const TCHAR *debug_common = "cCommon[%d] -> FRAG:%c X:%d   Y:%d";
-//	const TCHAR *debug_beam = "cBeam[%d] -> FRAG:%c";
-//
-//	// プレイヤーのステータス
-//	DrawFormatString(10,10,green,"Player -> X:%d",p.getX());
-//	DrawFormatString(10,30,green,"Player -> Y:%d",p.getY());
-//	DrawFormatString(10,50,green,"Player -> Life:%d",p.getLife());
-//	DrawFormatString(10,70,green,"Player -> Exp:%d (NextLevel:%dexp)", p.getExp(),p.getNeedExp());
-//	DrawFormatString(10,90,green,"Player -> Level:%d", p.getLevel());
-//	
-//	if(p.getGod())
-//	{
-//		cState_god = 'T';
-//	}
-//	else
-//	{
-//		cState_god = 'F';
-//	}
-//	DrawFormatString(10,110,green,"Player -> GodMode:%c", cState_god);
-//		
-//	// ビームのステータス
-//	for(int i = 0; i < BEAM_NUM ; i++)
-//	{
-//		if(b[i].getAlive())
-//		{
-//			bState = 'T';
-//		}
-//		else
-//		{
-//			bState = 'F';
-//		}
-//
-//		DrawFormatString(10,130 + (20 * i),sky_blue, debug_beam ,i + 1 ,bState);
-//	}
-//
-//	//// ザコキャラのステータス
-//	//for(int i = 0 ; i < COMMON_NUM; i++)
-//	//{
-//	//	if(c[i].getAlive())
-//	//	{
-//	//		cState = 'T';
-//	//	}
-//	//	else
-//	//	{
-//	//		cState = 'F';
-//	//	}
-//
-//	//	if(i < 20)
-//	//	{
-//	//		DrawFormatString(10,70 + (20 * BEAM_NUM) + (20 * i), red, debug_common,
-//	//						 i + 1 ,cState, c[i].getX(), c[i].getY());
-//	//	}
-//	//	else
-//	//	{
-//	//		DrawFormatString(wWIDTH - GetDrawStringWidth(debug_common, strlen(debug_common)), 10 + (20 * (i - 20)), red, debug_common,
-//	//						 i + 1, cState, c[i].getX(), c[i].getY());
-//	//	}
-//
-//	//}
-//
-//	//// ザコキャラの次の出現時間
-//	//int RemainTime = (SpawnTime - (GetNowCount() - LastSpawn)) / 1000 + 1;
-//	//DrawFormatString(10, 70 + (20 * BEAM_NUM) + (20 * COMMON_NUM), red,"NextSpawn -> %dsec",RemainTime);
-//
-//}
